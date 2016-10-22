@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* File: MainWindow.xaml.cs
+ * Created by: Krishna Kanhaiya
+ * Created on: 21 October 2016
+ * Title: Rock Paper Scissor Game
+    */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +38,7 @@ namespace Assignment6Group6
             Random ran = new Random();
             int num = ran.Next(1, 4);
             computeChoice = num;
+            // Following is the logic to decide the winner of the game
             if(userChoice == 0 || computeChoice == 0)
             {
                 MessageBox.Show("Please follow correct steps.");
@@ -83,21 +90,22 @@ namespace Assignment6Group6
                 }
             }
         }
-
+        //Logic for assigning user choice for Rock selection
         private void btnRock_Click(object sender, RoutedEventArgs e)
         {
             userChoice = 1;
         }
-
+        //Logic for assigning user choice for Paper selection
         private void btnPaper_Click(object sender, RoutedEventArgs e)
         {
             userChoice = 2;
         }
-
+        //Logic for assigning user choice for Scissor selection
         private void btnScissor_Click(object sender, RoutedEventArgs e)
         {
             userChoice = 3;
         }
+        //Logic for reset button
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             userChoice = 0;
